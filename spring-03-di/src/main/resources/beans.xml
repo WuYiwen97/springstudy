@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.wuyiwen.pojo.Student">
+        <property name="name" value="wuydiwen"/>
+        <property name="address" ref="address"/>
+        <!--array-->
+        <property name="book">
+            <array>
+                <value>dd</value>
+                <value>dd2</value>
+                <value>dd3</value>
+            </array>
+        </property>
+
+        <property name="hobbies">
+            <list>
+                <value>cc</value>
+                <value>cc2</value>
+                <value>cc3</value>
+            </list>
+        </property>
+
+
+        <property name="card">
+            <map>
+                <entry key="afsa" value="dfasf"/>
+                <entry key="afseea" value="dfaewqsf"/>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>DOTA2</value>
+                <value>WZRY</value>
+            </set>
+        </property>
+
+
+        <property name="wife"><null/></property>
+
+
+        <property name="info">
+            <props>
+                <prop key="xuehao">fsadfas</prop>
+                <prop key="xuehao2">eqwerwqr</prop>
+                <prop key="xuehao3">ewrqwer</prop>
+                <prop key="xuehao5">fsaewrqwrqdfas</prop>
+            </props>
+        </property>
+
+
+
+
+    </bean>
+
+
+    <bean id="address" class="com.wuyiwen.pojo.Address">
+        <property name="address" value="china"/>
+    </bean>
+</beans>
