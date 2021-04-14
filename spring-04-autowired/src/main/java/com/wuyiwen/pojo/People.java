@@ -2,10 +2,12 @@ package com.wuyiwen.pojo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
+
 public class People {
-    @Autowired
+    @Resource
     private Cat cat;
-    @Autowired
+    @Resource
     private Dog dog;
     private String str;
 

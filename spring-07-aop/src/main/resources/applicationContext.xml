@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+
+    <bean id="userService" class="com.wuyiwen.service.UserServiceImpl"/>
+    <bean id="log" class="com.wuyiwen.log.Log"/>
+    <bean id="afterlog" class="com.wuyiwen.log.AfterLog"/>
+
+
+
+
+
+
+    <!--<aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* com.wuyiwen.service.UserServiceImpl.*(..))" />
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterlog" pointcut-ref="pointcut"/>
+     </aop:config>-->
+
+
+    <!--<bean id="diy" class="com.wuyiwen.diy.DiyPoincut"/>
+    <aop:config>
+        <aop:aspect ref="diy">
+        <aop:pointcut id="diyPointcut" expression="execution(* com.wuyiwen.service.UserServiceImpl.*(..))" />
+        <aop:before method="before" pointcut-ref="diyPointcut"/>
+        <aop:after method="after" pointcut-ref="diyPointcut"/>
+        </aop:aspect>
+    </aop:config>-->
+
+    <context:component-scan base-package="com.wuyiwen.diy"/>
+    <aop:aspectj-autoproxy/>
+
+</beans>
