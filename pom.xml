@@ -16,6 +16,7 @@
         <module>spring-05-anno</module>
         <module>spring-06-appconfig</module>
         <module>spring-07-aop</module>
+        <module>spring4booklearn</module>
     </modules>
 
     <dependencies>
@@ -29,6 +30,11 @@
             <artifactId>junit</artifactId>
             <version>4.13</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>4.3.0.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

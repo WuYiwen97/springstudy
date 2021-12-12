@@ -1,6 +1,10 @@
 package com.wuyiwen.pojo;
 
 public class Hello {
+
+    public  Hello(String name){
+        this.name =name;
+    }
     private String name;
 
     public String getName() {
